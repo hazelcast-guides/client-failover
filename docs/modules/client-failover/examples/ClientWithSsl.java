@@ -113,6 +113,7 @@ public class ClientWithSsl {
                 e.printStackTrace();
             }
             // end::catch-exceptions[]
+            map.put("key-" + randomKey, "value-" + randomKey); // Remove when using exception handling
             map.get("key-" + random.nextInt(100_000));
             if (++iterationCounter == 10) {
                 iterationCounter = 0;
