@@ -67,7 +67,7 @@ public class ClientWithSsl {
         config.getConnectionStrategyConfig()
             .getConnectionRetryConfig()
             .setClusterConnectTimeoutMillis(10000); // <5>
-        config.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.cloud");
+        config.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.com");
 
         return config;
         }
