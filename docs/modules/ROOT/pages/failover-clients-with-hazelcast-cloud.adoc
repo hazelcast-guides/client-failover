@@ -76,7 +76,7 @@ If you're using the `nonStopMapExample` in the sample Java client, your client s
 
 Update the `nonStopMapExample()` function in your failover client to trap the exception that is thrown when the primary cluster disconnects.
 
-. Add the following try-catch block to the `while` loop in the `nonStopMapExample()` function.
+. Add the following try-catch block to the `while` loop in the `nonStopMapExample()` function. This code replaces the original `map.put()` function.
 +
 [source,java]
 ----
