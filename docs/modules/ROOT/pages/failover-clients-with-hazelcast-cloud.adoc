@@ -46,7 +46,7 @@ Update the code in the Java client (`ClientwithSsl.java`) of your primary cluste
 .ClientwithSsl.java
 [source,java]
 ----
-include::tutorials:client-failover:example$ClientWithSsl.java[tags=!intro-comments;!catch-exceptions]
+include::tutorials:client-failover:example$ClientWithSsl.java[tags=!intro-comments]
 ----
 <1> Add import for the `ClientFailoverConfig` class.
 <2> Create a `ClientFailoverConfig` object.
@@ -76,11 +76,16 @@ If you're using the `nonStopMapExample` in the sample Java client, your client s
 
 Update the `nonStopMapExample()` function in your failover client to trap the exception that is thrown when the primary cluster disconnects.
 
-. Add the following try-catch block to the `while` loop in the `nonStopMapExample()` function.
+. Add the following try-catch block to the `while` loop in the `nonStopMapExample()` function. This code replaces the original `map.put()` function.
 +
 [source,java]
 ----
-include::tutorials:client-failover:example$ClientWithSsl.java[tag=catch-exceptions,indent=0]
+try {
+    map.put("key-" + randomKey, "value-" + randomKey);
+} catch (Exception e) {
+    // Captures exception from disconnected client
+    e.printStackTrace();
+}
 ----
 
 . <<step-3-testing, Verify your code again>>. This time the client continues to write map entries after it connects to the secondary cluster.

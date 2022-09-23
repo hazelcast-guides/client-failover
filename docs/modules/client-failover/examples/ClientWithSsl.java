@@ -67,7 +67,7 @@ public class ClientWithSsl {
         config.getConnectionStrategyConfig()
             .getConnectionRetryConfig()
             .setClusterConnectTimeoutMillis(10000); // <5>
-        config.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.cloud");
+        config.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.com");
 
         return config;
         }
@@ -105,14 +105,7 @@ public class ClientWithSsl {
         int iterationCounter = 0;
         while (true) {
             int randomKey = random.nextInt(100_000);
-            // tag::catch-exceptions[]
-            try {
-                map.put("key-" + randomKey, "value-" + randomKey);
-            } catch (Exception e) {
-                // Captures exception from disconnected client
-                e.printStackTrace();
-            }
-            // end::catch-exceptions[]
+            map.put("key-" + randomKey, "value-" + randomKey); // Replaced by exception handling
             map.get("key-" + random.nextInt(100_000));
             if (++iterationCounter == 10) {
                 iterationCounter = 0;
