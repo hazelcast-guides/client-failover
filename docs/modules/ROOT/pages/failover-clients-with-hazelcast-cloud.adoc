@@ -82,9 +82,10 @@ Update the `nonStopMapExample()` function in your failover client to trap the ex
 ----
 try {
     map.put("key-" + randomKey, "value-" + randomKey);
-    } catch (Exception e) {
+} catch (Exception e) {
+    // Captures exception from disconnected client
     e.printStackTrace();
-    }
+}
 ----
 
 . <<step-3-testing, Verify your code again>>. This time the client continues to write map entries after it connects to the secondary cluster.
