@@ -105,15 +105,7 @@ public class ClientWithSsl {
         int iterationCounter = 0;
         while (true) {
             int randomKey = random.nextInt(100_000);
-            // tag::catch-exceptions[]
-            try {
-                map.put("key-" + randomKey, "value-" + randomKey);
-            } catch (Exception e) {
-                // Captures exception from disconnected client
-                e.printStackTrace();
-            }
-            // end::catch-exceptions[]
-            // map.put("key-" + randomKey, "value-" + randomKey); Replaced by exception handling
+            map.put("key-" + randomKey, "value-" + randomKey); Replaced by exception handling
             map.get("key-" + random.nextInt(100_000));
             if (++iterationCounter == 10) {
                 iterationCounter = 0;
