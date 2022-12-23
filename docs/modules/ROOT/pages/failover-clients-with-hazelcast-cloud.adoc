@@ -21,9 +21,9 @@ Consider using a failover client with xref:cloud:ROOT:wan-replication.adoc[WAN r
 Create two {hazelcast-cloud} Serverless clusters that you'll use as your primary and secondary clusters and then download and connect sample Java clients to them.
 
 . xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Serverless cluster] that you'll use as your primary cluster. When the cluster is ready to use, the *Quick Connection Guide* is displayed.
-. Select the Java icon, and follow the on-screen instructions to download, extract, and connect the preconfigured Java client to your primary cluster.
+. Select the Java icon and follow the on-screen instructions to download, extract, and connect the preconfigured Java client to your primary cluster.
 . xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Serverless cluster] that you'll use as your secondary cluster. 
-. Again, follow the instructions in the *Quick Connection Guide* to download, extract, and connect the preconfigured Java client to your secondary cluster. 
+. Follow the instructions in the *Quick Connection Guide* to download, extract, and connect the preconfigured Java client to your secondary cluster. 
 
 You now have two running clusters, and you've checked that both Java clients can connect.
 
