@@ -56,7 +56,7 @@ include::tutorials:client-failover:example$ClientWithSsl.java[tags=!intro-commen
 <6> Create the config object for the secondary cluster.
 <7> Provide the keystore files for the secondary cluster. 
 
-[[step-3-te*sting]]
+[[step-3-testing]]
 == Step 3. Verify Failover
 
 Check that your failover client automatically connects to the secondary cluster when your primary cluster is stopped.
