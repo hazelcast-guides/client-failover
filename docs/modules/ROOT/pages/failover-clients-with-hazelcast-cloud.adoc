@@ -13,8 +13,6 @@
 
 Failover is an important feature of systems that rely on near-constant availability. In Hazelcast, a failover client automatically redirects its traffic to a secondary cluster when the client cannot connect to the primary cluster.
 
-Consider using a failover client with xref:cloud:ROOT:wan-replication.adoc[WAN replication] as part of your disaster recovery strategy.
-
 [[step-1-setup]]
 == Step 1. Set Up Clusters and Clients
 
