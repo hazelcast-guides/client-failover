@@ -16,11 +16,11 @@ Failover is an important feature of systems that rely on near-constant availabil
 [[step-1-setup]]
 == Step 1. Set Up Clusters and Clients
 
-Create two {hazelcast-cloud} Serverless clusters that you'll use as your primary and secondary clusters and then download and connect sample Java clients to them.
+Create two clusters in Hazelcast {hazelcast-cloud} that you'll use as your primary and secondary clusters and then download and connect sample Java clients to them.
 
-. xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Serverless cluster] that you'll use as your primary cluster. When the cluster is ready to use, the *Quick Connection Guide* is displayed.
+. xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Standard cluster] that you'll use as your primary cluster. When the cluster is ready to use, the *Quick Connection Guide* is displayed.
 . Select the Java icon and follow the on-screen instructions to download, extract, and connect the preconfigured Java client to your primary cluster.
-. xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Serverless cluster] that you'll use as your secondary cluster. 
+. xref:cloud:ROOT:create-serverless-cluster.adoc[Create the {hazelcast-cloud} Standard cluster] that you'll use as your secondary cluster. 
 . Follow the instructions in the *Quick Connection Guide* to download, extract, and connect the preconfigured Java client to your secondary cluster. 
 
 You now have two running clusters, and you've checked that both Java clients can connect.
@@ -59,7 +59,7 @@ include::tutorials:client-failover:example$ClientWithSsl.java[tags=!intro-commen
 
 Check that your failover client automatically connects to the secondary cluster when your primary cluster is stopped.
 
-. Make sure that both {hazelcast-cloud} Serverless clusters are running.
+. Make sure that both {hazelcast-cloud} Standard clusters are running.
 . Connect your failover client to the primary cluster in the same way as you did in <<step-1-setup, Step 1>>.
 . Stop your primary cluster. From the dashboard of your primary cluster, in *Cluster Details*, select *Pause*. In the console, you'll see the following messages in order as the client disconnects from your primary cluster and reconnects to the secondary cluster:
 
