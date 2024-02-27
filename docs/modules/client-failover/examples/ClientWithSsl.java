@@ -18,7 +18,7 @@ import com.hazelcast.sql.SqlService;
 // tag::intro-comments[]
 /**
  * This is a boilerplate application that configures a client 
- * to connect to a Hazelcast Viridian cluster.
+ * to connect to a Hazelcast Cloud cluster.
  * See: https://docs.hazelcast.com/cloud/get-started
  * 
  * The numbers in angled brackets are used in the documentation 
@@ -67,7 +67,7 @@ public class ClientWithSsl {
         config.getConnectionStrategyConfig()
             .getConnectionRetryConfig()
             .setClusterConnectTimeoutMillis(10000); // <5>
-        config.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.com");
+        config.setProperty("hazelcast.client.cloud.url", "https://api.cloud.hazelcast.com");
 
         return config;
         }
